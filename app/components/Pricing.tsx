@@ -2,12 +2,12 @@ import React from "react";
 
 export default function Pricing() {
   return (
-    <section className="overflow-hidden bg-white py-24 sm:py-32">
+    <section className="overflow-hidden bg-white py-20 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
           <div className="lg:ml-auto lg:pl-4 lg:pt-4">
             <div className="lg:max-w-lg">
-              <h2 className="text-base font-semibold leading-7 text-teal-600">
+              <h2 className="text-base font-semibold leading-7 text-teal-500">
                 Pricing
               </h2>
               <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
@@ -97,7 +97,7 @@ export default function Pricing() {
                 <div className="mt-10 flex">
                   <a
                     href="#"
-                    className="text-lg font-semibold leading-6 text-teal-600"
+                    className="text-lg font-semibold leading-6 text-teal-500 transition duration-300 ease-in-out hover:text-teal-400"
                   >
                     Book a free estimate <span aria-hidden="true">&rarr;</span>
                   </a>

@@ -30,10 +30,13 @@ export default function FAQ() {
   return (
     <section className="bg-gray-900">
       <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8 lg:py-40">
-        <div className="mx-auto max-w-4xl divide-y divide-white/10">
-          <h2 className="text-2xl font-bold leading-10 tracking-tight text-white">
-            Frequently asked questions
+        <div className="mx-auto max-w-4xl ">
+          <h2 className="text-base font-semibold leading-7 text-teal-600">
+            FAQ
           </h2>
+          <p className="text-2xl font-bold leading-10 tracking-tight text-white">
+            Frequently asked questions
+          </p>
           <dl className="mt-10 space-y-6 divide-y divide-white/10">
             {faqs.map((faq) => (
               <Disclosure as="div" key={faq.question} className="pt-6">

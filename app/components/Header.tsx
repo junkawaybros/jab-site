@@ -63,7 +63,7 @@ export default function Header() {
           <div className="flex lg:hidden">
             <a
               href="#"
-              className="ml-auto mr-4 rounded-md bg-teal-500 px-3 py-2 text-sm font-semibold uppercase text-white shadow-sm hover:bg-teal-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-500"
+              className="ml-auto mr-4 rounded-md bg-teal-500 px-3 py-2  text-sm font-semibold uppercase text-white shadow-sm transition duration-300 ease-in-out hover:bg-teal-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-500"
             >
               {data.cta}
             </a>
@@ -91,7 +91,7 @@ export default function Header() {
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
             <a
               href="#"
-              className="rounded-md bg-teal-500 px-3.5 py-2.5 text-lg font-semibold uppercase text-white shadow-sm hover:bg-teal-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-400"
+              className="rounded-md bg-teal-500 px-3.5 py-2.5 text-lg font-semibold uppercase text-white shadow-sm transition duration-300 ease-in-out hover:bg-teal-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-400"
             >
               {data.cta}
             </a>
@@ -115,7 +115,7 @@ export default function Header() {
 
               <a
                 href="#"
-                className="ml-auto mr-4 rounded-md bg-teal-500 px-3 py-2 text-sm font-semibold uppercase text-white shadow-sm hover:bg-teal-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-500"
+                className="ml-auto mr-4 rounded-md bg-teal-500 px-3 py-2 text-sm font-semibold uppercase text-white shadow-sm transition duration-300 ease-in-out hover:bg-teal-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-500"
               >
                 {data.cta}
               </a>
