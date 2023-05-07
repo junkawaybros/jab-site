@@ -12,7 +12,7 @@ export default function HowWeWork() {
               alt=""
             />
             <div className="w-full flex-auto">
-              <h2 className="text-base font-semibold leading-7 text-teal-500">
+              <h2 className="text-base font-semibold leading-7 text-teal-400">
                 How we work
               </h2>
               <p className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
