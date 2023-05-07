@@ -3,7 +3,7 @@ import HeroJunk from "../../public/hero-junk.jpg";
 
 export default function Hero() {
   return (
-    <div className="bg-gray-900">
+    <section className="bg-gray-900">
       <div className="relative isolate overflow-hidden">
         <div className="mx-auto max-w-7xl pt-10 sm:pb-32 lg:grid lg:grid-cols-2 lg:gap-x-8 lg:px-8 lg:py-20">
           <div className="px-6 lg:px-0 lg:pt-4">
@@ -61,6 +61,6 @@ export default function Hero() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
