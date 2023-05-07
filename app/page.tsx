@@ -19,7 +19,6 @@ export default function Home() {
       <Pricing />
       <Contact />
       <FAQ />
-      <Footer />
     </main>
   );
 }
