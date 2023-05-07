@@ -55,6 +55,7 @@ export default function Hero() {
               className="md:rounded-lg"
               src={HeroJunk}
               alt="Full service junk removal in Denver, Aurora and Centennial"
+              placeholder="blur"
               priority
             />
           </div>
