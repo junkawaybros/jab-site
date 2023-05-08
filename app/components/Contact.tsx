@@ -40,7 +40,7 @@ export default function Contact() {
               </svg>
             </div>
             <h2 className="text-base font-semibold leading-7 text-teal-500">
-              Contact
+              Contact now
             </h2>
             <p className="text-3xl font-bold tracking-tight text-gray-900">
               Let's talk now
