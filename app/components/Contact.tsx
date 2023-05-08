@@ -43,7 +43,7 @@ export default function Contact() {
               Contact now
             </h2>
             <p className="text-3xl font-bold tracking-tight text-gray-900">
-              Let's talk now
+              Talk with a bro.
             </p>
             <p className="mt-6 text-lg leading-8 text-gray-600">
               Proin volutpat consequat porttitor cras nullam gravida at. Orci
