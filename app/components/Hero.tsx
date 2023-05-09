@@ -4,7 +4,7 @@ import Benefits from "./Benefits";
 
 export default function Hero() {
   return (
-    <section className="bg-white">
+    <section className="bg-white" id="hero">
       <div className="relative isolate overflow-hidden">
         <div className="mx-auto max-w-7xl pt-10 md:pt-0 lg:grid lg:grid-cols-2 lg:gap-x-8 lg:px-8 lg:py-20 lg:pb-0">
           <div className="px-6 lg:px-0 lg:pt-4">
@@ -19,16 +19,16 @@ export default function Hero() {
                   qui lorem cupidatat commodo. Elit sunt amet fugiat veniam
                   occaecat fugiat aliqua.
                 </p>
-                <div className="items-left mt-10 flex flex-col items-baseline gap-x-6 gap-y-6 sm:flex-row">
+                <div className="items-left mt-10 flex flex-row items-baseline gap-x-6 gap-y-6 sm:flex-row">
                   <a
                     href="#"
-                    className="text-md sm:text-md rounded-md bg-teal-500 px-3.5 py-2.5 font-semibold uppercase text-white shadow-sm transition duration-300 ease-in-out hover:bg-teal-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-500"
+                    className="sm:text-md rounded-md bg-teal-500 px-3.5 py-2.5 text-sm font-semibold uppercase text-white shadow-sm transition duration-300 ease-in-out hover:bg-teal-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-500 lg:text-lg"
                   >
                     Get a free estimate
                   </a>
                   <a
                     href="#"
-                    className="text-md flex font-semibold uppercase leading-6 text-teal-500 transition duration-300 ease-in-out hover:text-teal-400 "
+                    className="sm:text-md flex text-xs font-semibold uppercase leading-6 text-teal-500 transition duration-300 ease-in-out hover:text-teal-400 lg:text-lg "
                   >
                     <span className="mr-2">Learn more</span>
                     <svg

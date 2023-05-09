@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Items() {
   return (
-    <section className="bg-white pb-20 sm:pb-32">
+    <section className="bg-white pb-20 sm:pb-32" id="what-we-take">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
           <div>
