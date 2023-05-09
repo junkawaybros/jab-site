@@ -1,6 +1,7 @@
 import Image from "next/image";
 import HeroJunk from "../../public/hero-junk.jpg";
 import Benefits from "./Benefits";
+import LearnMoreLink from "./LearnMoreLink";
 
 export default function Hero() {
   return (
@@ -26,26 +27,7 @@ export default function Hero() {
                   >
                     Get a free estimate
                   </a>
-                  <a
-                    href="#"
-                    className="sm:text-md flex text-xs font-semibold uppercase leading-6 text-teal-500 transition duration-300 ease-in-out hover:text-teal-400 lg:text-lg "
-                  >
-                    <span className="mr-2">Learn more</span>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      strokeWidth={1.5}
-                      stroke="currentColor"
-                      className="h-6 w-6"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M12 4.5v15m0 0l6.75-6.75M12 19.5l-6.75-6.75"
-                      />
-                    </svg>
-                  </a>
+                  <LearnMoreLink />
                 </div>
               </div>
             </div>
