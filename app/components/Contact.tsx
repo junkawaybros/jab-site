@@ -1,8 +1,9 @@
-import {
-  BuildingOffice2Icon,
-  EnvelopeIcon,
-  PhoneIcon,
-} from "@heroicons/react/24/outline";
+import { EnvelopeIcon, PhoneIcon } from "@heroicons/react/24/outline";
+
+const data = {
+  phone: "303-856-5791",
+  email: "seyfat@junkawaybros.com",
+};
 
 export default function Contact() {
   return (
@@ -40,18 +41,14 @@ export default function Contact() {
               </svg>
             </div>
             <h2 className="text-base font-semibold leading-7 text-teal-500">
-              Contact now
+              Contact Us
             </h2>
-            <p className="text-3xl font-bold tracking-tight text-gray-900">
-              Talk with a bro.
-            </p>
+            <p className="text-3xl font-bold tracking-tight text-gray-900"></p>
             <p className="mt-6 text-lg leading-8 text-gray-600">
-              Proin volutpat consequat porttitor cras nullam gravida at. Orci
-              molestie a eu arcu. Sed ut tincidunt integer elementum id sem.
-              Arcu sed malesuada et magna.
+              {`Have a question? Reach out! Fill out the form  and we'll respond ASAP.`}
             </p>
             <dl className="mt-10 space-y-4 text-base leading-7 text-gray-600">
-              <div className="flex gap-x-4">
+              {/* <div className="flex gap-x-4">
                 <dt className="flex-none">
                   <span className="sr-only">Address</span>
                   <BuildingOffice2Icon
@@ -64,21 +61,18 @@ export default function Contact() {
                   <br />
                   Chicago, IL 99191
                 </dd>
-              </div>
+              </div> */}
               <div className="flex gap-x-4">
                 <dt className="flex-none">
-                  <span className="sr-only">Telephone</span>
+                  <span className="sr-only">Phone</span>
                   <PhoneIcon
                     className="h-7 w-6 text-gray-400"
                     aria-hidden="true"
                   />
                 </dt>
                 <dd>
-                  <a
-                    className="hover:text-gray-900"
-                    href="tel:+1 (555) 234-5678"
-                  >
-                    +1 (555) 234-5678
+                  <a className="hover:text-teal-500" href="tel:3038565791">
+                    {data.phone}
                   </a>
                 </dd>
               </div>
@@ -86,16 +80,16 @@ export default function Contact() {
                 <dt className="flex-none">
                   <span className="sr-only">Email</span>
                   <EnvelopeIcon
-                    className="h-7 w-6 text-gray-400"
+                    className="h-7 w-6 text-gray-500"
                     aria-hidden="true"
                   />
                 </dt>
                 <dd>
                   <a
-                    className="hover:text-gray-900"
-                    href="mailto:hello@example.com"
+                    className="hover:text-teal-500"
+                    href="mailto:seyfat@junkawaybros.com"
                   >
-                    hello@example.com
+                    {data.email}
                   </a>
                 </dd>
               </div>
