@@ -1,4 +1,30 @@
-import React from "react";
+const data = {
+  title: "What we take",
+  subtitle: "SAME DAY OR NEXT DAY PICK UP",
+  description: `The Bros can pickup just about any item, excluding hazardous items of course - from old mattresses and scrap metal to yard waste and construction debris. No need to worry about heavy lifting - let us handle it for you. Got appliances, furniture, or electronics you need to get rid of? We've got you covered. Say goodbye to clutter and hello to a clean space with The Bros. Book now to get your free estimate.`,
+  items: [
+    { id: 1, name: "Appliances (including Refrigerators & Freezers)" },
+    { id: 2, name: "BBQ & Grills" },
+    { id: 3, name: "Bicycles" },
+    { id: 4, name: "Carpets & Rugs" },
+    { id: 5, name: "Electronics Disposal" },
+    { id: 6, name: "Exercise Equipment" },
+    { id: 7, name: "Furniture" },
+    { id: 8, name: "General Rubbish & Household Trash" },
+    { id: 9, name: "Glass" },
+    { id: 10, name: "Hot Tubs" },
+    { id: 11, name: "General Junk" },
+    { id: 12, name: "Mattresses & Box Springs" },
+    { id: 13, name: "Paint Disposal" },
+    { id: 14, name: "Pianos" },
+    { id: 15, name: "Playsets & Trampolines" },
+    { id: 16, name: "Pool Tables" },
+    { id: 17, name: "Scrap Metals" },
+    { id: 18, name: "Storage Sheds" },
+    { id: 19, name: "Tires & Rubber" },
+    { id: 21, name: "Yard Waste" },
+  ],
+};
 
 export default function Items() {
   return (
@@ -7,188 +33,35 @@ export default function Items() {
         <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
           <div>
             <h2 className="text-base font-semibold leading-7 text-teal-500">
-              What we take
+              {data.title}
             </h2>
             <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-              SAME DAY OR NEXT DAY PICK UP
+              {data.subtitle}
             </p>
             <p className="mt-6 text-base leading-7 text-gray-600">
-              Unsure of what kinds of junk items{" "}
-              <span className="font-semibold text-teal-700">The Bros</span> can
-              take? Our teams are happy to take most non-hazardous items from
-              your home, commercial business, or storage space. From large
-              appliances to old tires and electronics, our trained professionals
-              can take almost anything off your hands:
+              {data.description}
             </p>
           </div>
           <dl className="col-span-2 grid grid-cols-1 gap-x-8 gap-y-10 text-base leading-7 text-gray-600 sm:grid-cols-2 lg:gap-y-16">
-            <div className="relative pl-9">
-              <dt className="group font-semibold text-gray-900">
-                <svg
-                  className="absolute left-0 top-1 h-5 w-5 text-teal-500"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
-                Appliances
-              </dt>
-              <dd className="mt-2">
-                We can safely remove and dispose of old or broken household
-                appliances.
-              </dd>
-            </div>
-            <div className="relative pl-9">
-              <dt className="font-semibold text-gray-900">
-                <svg
-                  className="absolute left-0 top-1 h-5 w-5 text-teal-500"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
-                Furniture
-              </dt>
-              <dd className="mt-2">
-                Our team can haul away unwanted or damaged furniture, including
-                sofas, tables, and chairs.
-              </dd>
-            </div>
-            <div className="relative pl-9">
-              <dt className="font-semibold text-gray-900">
-                <svg
-                  className="absolute left-0 top-1 h-5 w-5 text-teal-500"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
-                Electronics
-              </dt>
-              <dd className="mt-2">
-                We provide safe and responsible disposal of electronic waste,
-                including computers, smartphones, and TVs.
-              </dd>
-            </div>
-            <div className="relative pl-9">
-              <dt className="font-semibold text-gray-900">
-                <svg
-                  className="absolute left-0 top-1 h-5 w-5 text-teal-500"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
-                Calendars
-              </dt>
-              <dd className="mt-2">
-                Sed rerum sunt dignissimos ullam. Iusto iure occaecati voluptate
-                eligendi fugiat sequi.
-              </dd>
-            </div>
-            <div className="relative pl-9">
-              <dt className="font-semibold text-gray-900">
-                <svg
-                  className="absolute left-0 top-1 h-5 w-5 text-teal-500"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
-                Notifications
-              </dt>
-              <dd className="mt-2">
-                Quos inventore harum enim nesciunt. Aut repellat rerum omnis
-                adipisci.
-              </dd>
-            </div>
-            <div className="relative pl-9">
-              <dt className="font-semibold text-gray-900">
-                <svg
-                  className="absolute left-0 top-1 h-5 w-5 text-teal-500"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
-                Boards
-              </dt>
-              <dd className="mt-2">
-                Quae sit sunt excepturi fugit veniam voluptatem ipsum commodi.
-              </dd>
-            </div>
-            <div className="relative pl-9">
-              <dt className="font-semibold text-gray-900">
-                <svg
-                  className="absolute left-0 top-1 h-5 w-5 text-teal-500"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
-                Reporting
-              </dt>
-              <dd className="mt-2">
-                Eos laudantium repellat sed architecto earum unde incidunt.
-                Illum sit dolores voluptatem.
-              </dd>
-            </div>
-            <div className="relative pl-9">
-              <dt className="font-semibold text-gray-900">
-                <svg
-                  className="absolute left-0 top-1 h-5 w-5 text-teal-500"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
-                Mobile app
-              </dt>
-              <dd className="mt-2">
-                Nulla est saepe accusamus nostrum est est. Fugit voluptatum
-                omnis quidem voluptatem.
-              </dd>
-            </div>
+            {data.items.map((item) => (
+              <div className="relative pl-9" key={item.id}>
+                <dt className="group font-semibold text-gray-900">
+                  <svg
+                    className="absolute left-0 top-1 h-5 w-5 text-teal-500"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  {item.name}
+                </dt>
+              </div>
+            ))}
           </dl>
         </div>
       </div>
