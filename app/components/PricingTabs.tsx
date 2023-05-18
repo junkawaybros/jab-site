@@ -9,7 +9,7 @@ function classNames(...classes: string[]) {
 
 export default function PricingTabs() {
   let [categories] = useState({
-    "Minimum Load": [
+    "Min Load": [
       "Removing a single piece of furniture (e.g., a couch, a mattress, a desk)",
       "Disposing of a single large appliance (e.g., a refrigerator, a washing machine, a stove)",
     ],

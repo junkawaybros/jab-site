@@ -64,10 +64,9 @@ export default function Pricing2() {
                     <div className="mt-10 flex">
                       <a
                         href="#"
-                        className="text-xl font-semibold leading-6 text-teal-400 transition duration-300 ease-in-out hover:text-teal-300"
+                        className="text-md rounded-md bg-teal-500 px-3.5 py-2.5 font-semibold uppercase text-white shadow-sm transition duration-300 ease-in-out hover:bg-teal-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-400 lg:text-lg"
                       >
                         {data.cta}
-                        <span aria-hidden="true">&rarr;</span>
                       </a>
                     </div>
                   </div>
