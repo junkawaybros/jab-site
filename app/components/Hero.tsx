@@ -32,7 +32,7 @@ export default function Hero() {
                     {data.cta}
                   </a>
                   <div className="hidden lg:block">
-                    <LearnMoreLink to={"benefits"} />
+                    <LearnMoreLink to={"how-we-work"} />
                   </div>
 
                   <div className="block lg:hidden">
