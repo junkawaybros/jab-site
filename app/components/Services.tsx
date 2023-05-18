@@ -1,4 +1,4 @@
-import React from "react";
+import CustomDisclosure from "./CustomDisclosure";
 
 const data = {
   title: " Professional High-Volume Junk and Clutter Cleanouts",
@@ -104,7 +104,16 @@ export default function Services() {
           </p>
         </div>
         <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
-          <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
+          <dl className="grid max-w-7xl grid-cols-1 gap-x-8 gap-y-8 lg:hidden lg:max-w-none lg:grid-cols-3">
+            {data.items.map((item) => (
+              <CustomDisclosure
+                key={item.id}
+                name={item.name}
+                description={item.description}
+              />
+            ))}
+          </dl>
+          <dl className="hidden max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:grid lg:max-w-none lg:grid-cols-3">
             {data.items.map((item) => (
               <div className="flex flex-col" key={item.id}>
                 <dt className="flex items-center gap-x-3 text-base font-semibold leading-7 text-white">
