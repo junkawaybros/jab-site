@@ -36,7 +36,7 @@ const data = [
 
 export default function Benefits() {
   return (
-    <section aria-labelledby="perks-heading" className="bg-white">
+    <section aria-labelledby="perks-heading" className="bg-white" id="benefits">
       <h2 id="perks-heading" className="sr-only">
         Why work with us?
       </h2>
