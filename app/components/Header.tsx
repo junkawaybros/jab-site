@@ -84,6 +84,7 @@ export default function Header() {
                 width={75}
                 height={24}
                 priority
+                onClick={() => setMobileMenuOpen(false)}
               />
             </Link>
           </div>
@@ -165,6 +166,7 @@ export default function Header() {
                   width={75}
                   height={24}
                   priority
+                  onClick={() => setMobileMenuOpen(false)}
                 />
               </Link>
 

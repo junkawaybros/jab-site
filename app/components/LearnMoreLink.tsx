@@ -1,11 +1,15 @@
 "use client";
 import { Link } from "react-scroll";
 
-export default function LearnMoreLink() {
+interface LearnMoreLinkProps {
+  to: "how-we-work" | "benefits";
+}
+
+export default function LearnMoreLink({ to }: LearnMoreLinkProps) {
   return (
     <Link
       className="sm:text-md flex cursor-pointer text-xs font-semibold uppercase leading-6 text-teal-500 transition duration-300 ease-in-out hover:text-teal-400 lg:text-lg"
-      to="how-we-work"
+      to={to}
       activeClass="active-desktop"
       spy={true}
       smooth={true}

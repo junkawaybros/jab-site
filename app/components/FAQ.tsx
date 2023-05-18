@@ -114,7 +114,7 @@ export default function FAQ() {
                 {({ open }) => (
                   <>
                     <dt>
-                      <Disclosure.Button className="flex w-full items-start justify-between text-left text-white">
+                      <Disclosure.Button className="flex w-full items-start justify-between text-left text-white transition duration-300 ease-in-out hover:text-teal-400">
                         <span className="text-base font-semibold leading-7">
                           {faq.question}
                         </span>

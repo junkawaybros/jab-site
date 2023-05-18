@@ -5,12 +5,7 @@ import LearnMoreLink from "./LearnMoreLink";
 
 const data = {
   title: "Full-service junk removal and hauling in Denver.",
-  description: `Get efficient and quick junk removal services in Denver today!
-  No hidden fees, we offer free onsite estimates with
-  all-inclusive pricing. Need it done today? No problem! We
-  offer same-day services and with a friendly and professional
-  team you won't have to lift a finger, leave it all to us.
-  Trust The Bros to get the job done right.`,
+  description: `Quick and easy junk removal services for busy people!`,
   cta: "Get a free estimate",
 };
 
@@ -36,7 +31,13 @@ export default function Hero() {
                   >
                     {data.cta}
                   </a>
-                  <LearnMoreLink />
+                  <div className="hidden lg:block">
+                    <LearnMoreLink to={"how-we-work"} />
+                  </div>
+
+                  <div className="block lg:hidden">
+                    <LearnMoreLink to={"benefits"} />
+                  </div>
                 </div>
               </div>
             </div>
