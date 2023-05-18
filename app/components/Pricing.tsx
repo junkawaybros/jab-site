@@ -8,10 +8,13 @@ const data = {
 
 export default function Pricing2() {
   return (
-    <div className="bg-white py-20 sm:py-32" id="pricing">
+    <div className="bg-white py-20 sm:py-32">
       <div className="mx-auto max-w-7xl">
         <div className="mx-auto max-w-2xl px-6 sm:text-center lg:px-8">
-          <h2 className="text-base font-semibold leading-7 text-teal-400">
+          <h2
+            className="text-base font-semibold leading-7 text-teal-400"
+            id="pricing"
+          >
             {data.title}
           </h2>
 
