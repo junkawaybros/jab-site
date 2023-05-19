@@ -25,3 +25,11 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+.active-mobile {
+  @apply bg-gray-800 text-teal-400;
+}
+
+.active-desktop {
+  @apply text-teal-400;
+}
