@@ -6,8 +6,9 @@ import Footer from "./components/Footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "JunkAway Bros",
-  description: "Full Service Junk removal in Denver, Aurora and Centennial",
+  title: "Full-Service Junk Removal - JunkAway Bros",
+  description:
+    "Need it done now? Quick and easy Full Service Junk Removal for Denver, Aurora & Centennial. Same-day service available.",
 };
 
 export default function RootLayout({
