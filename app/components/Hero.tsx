@@ -4,8 +4,8 @@ import Benefits from "./Benefits";
 import LearnMoreLink from "./LearnMoreLink";
 
 const data = {
-  title: "Full-service junk removal and hauling in Denver.",
-  description: `Quick and easy junk removal services for busy people!`,
+  title: "Quick and easy full-service junk removal with same-day service.",
+  description: `We handle all the heavy lifting and responsibly dispose of items, so you don't have to.`,
   cta: "Get a free estimate",
 };
 
@@ -19,7 +19,7 @@ export default function Hero() {
             <div className="px-6 lg:px-0 lg:pt-4">
               <div className="mx-auto max-w-2xl">
                 <div className="max-w-lg">
-                  <h1 className="text-4xl font-bold tracking-tight text-gray-950 sm:mt-10 sm:text-2xl">
+                  <h1 className="text-4xl font-bold tracking-tight text-gray-950 sm:mt-10 sm:text-3xl">
                     {data.title}
                   </h1>
                   <p className="mt-6 text-lg leading-8 text-gray-900">
@@ -28,7 +28,7 @@ export default function Hero() {
 
                   <div className="items-left mt-10 flex flex-row items-baseline gap-x-6 gap-y-6 sm:flex-row">
                     <a
-                      href="#"
+                      href="tel:3038565791"
                       className="sm:text-md rounded-md bg-teal-500 px-3.5 py-2.5 text-sm font-semibold uppercase text-white shadow-sm transition duration-300 ease-in-out hover:bg-teal-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-500 lg:text-lg"
                     >
                       {data.cta}
@@ -48,7 +48,7 @@ export default function Hero() {
               <Image
                 className="md:rounded-lg"
                 src={HeroJunk}
-                alt="Full service junk removal in Denver, Aurora and Centennial"
+                alt="Need it done now? Quick and easy Full Service Junk Removal for Denver, Aurora & Centennial. Same-day service available."
                 placeholder="blur"
                 priority
               />
