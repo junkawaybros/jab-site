@@ -14,7 +14,7 @@ const data = [
     alt: "Budget",
     title: "Transparent Pricing",
     description:
-      "Our pricing is straightforward with no hidden fees or surprises. You'll always know the final price before we start.",
+      "Our pricing is straightforward, with no hidden fees or surprises. You'll always receive a free, no-obligation estimate before we start.",
   },
   {
     id: 3,

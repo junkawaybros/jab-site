@@ -3,6 +3,29 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import { ErrorMessage } from "@hookform/error-message";
 import axios from "axios";
+import { yupResolver } from "@hookform/resolvers/yup";
+import * as yup from "yup";
+
+const schema = yup.object().shape({
+  firstName: yup.string().required("First name is required"),
+  lastName: yup.string(),
+  email: yup
+    .string()
+    .email("Invalid email address.")
+    .required("Email is required"),
+  phoneNumber: yup
+    .string()
+    .required("Phone number is required")
+    .matches(/^[0-9]{10}$/, "Phone number is not valid."),
+  message: yup.string().required("Message is required"),
+  zipCode: yup
+    .string()
+    .required("Zip code is required")
+    .matches(
+      /^\d{5}(-\d{4})?$/,
+      "ZIP code is not valid. It should be in the format 12345 or 12345-6789."
+    ),
+});
 
 export default function ContactForm() {
   const {
@@ -10,9 +33,8 @@ export default function ContactForm() {
     handleSubmit,
     reset,
     formState: { errors, isSubmitSuccessful },
-  } = useForm();
+  } = useForm({ resolver: yupResolver(schema) });
   const onSubmit = (data: any) => {
-    // console.log(data);
     axios.post("https://formspree.io/f/xyyavaod", data);
   };
 
@@ -28,8 +50,6 @@ export default function ContactForm() {
       });
     }
   }, [isSubmitSuccessful, reset]);
-
-  console.log(errors.firstName);
 
   return (
     <form
@@ -51,15 +71,13 @@ export default function ContactForm() {
                 type="text"
                 id="firstName"
                 autoComplete="given-name"
+                placeholder="John"
                 className={`block w-full rounded-md border-0 px-3.5 py-2 sm:text-sm sm:leading-6 ${
                   errors.firstName
                     ? `text-red-900 ring-1 ring-inset ring-red-300 placeholder:text-red-300 focus:ring-2 focus:ring-inset focus:ring-red-500`
                     : `text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-teal-500`
                 }`}
-                {...register("firstName", {
-                  required: "This field is required",
-                  maxLength: 80,
-                })}
+                {...register("firstName", {})}
               />
             </div>
 
@@ -84,10 +102,9 @@ export default function ContactForm() {
                 type="text"
                 id="lastName"
                 autoComplete="family-name"
+                placeholder="Doe"
                 className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-teal-500 sm:text-sm sm:leading-6"
-                {...register("lastName", {
-                  maxLength: 100,
-                })}
+                {...register("lastName", {})}
               />
             </div>
           </div>
@@ -104,15 +121,13 @@ export default function ContactForm() {
                 type="email"
                 id="email"
                 autoComplete="email"
+                placeholder="johndoe@example.com"
                 className={`block w-full rounded-md border-0 px-3.5 py-2 sm:text-sm sm:leading-6 ${
                   errors.email
                     ? `text-red-900 ring-1 ring-inset ring-red-300 placeholder:text-red-300 focus:ring-2 focus:ring-inset focus:ring-red-500`
                     : `text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-teal-500`
                 }`}
-                {...register("email", {
-                  required: "This field is required",
-                  pattern: /^\S+@\S+$/i,
-                })}
+                {...register("email", {})}
               />
             </div>
 
@@ -139,16 +154,13 @@ export default function ContactForm() {
                 type="tel"
                 id="phoneNumber"
                 autoComplete="tel"
+                placeholder="555-555-5555"
                 className={`block w-full rounded-md border-0 px-3.5 py-2 sm:text-sm sm:leading-6 ${
                   errors.phoneNumber
                     ? `text-red-900 ring-1 ring-inset ring-red-300 placeholder:text-red-300 focus:ring-2 focus:ring-inset focus:ring-red-500`
                     : `text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-teal-500`
                 }`}
-                {...register("phoneNumber", {
-                  required: "This field is required",
-                  minLength: 6,
-                  maxLength: 12,
-                })}
+                {...register("phoneNumber", {})}
               />
             </div>
 
@@ -170,13 +182,25 @@ export default function ContactForm() {
             </label>
             <div className="mt-2.5">
               <input
-                type="tel"
+                type="text"
                 id="zipCode"
-                autoComplete="number"
-                className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-teal-500 sm:text-sm sm:leading-6"
+                placeholder="80015"
+                autoComplete="postal-code"
+                className={`block w-full rounded-md border-0 px-3.5 py-2 sm:text-sm sm:leading-6 ${
+                  errors.zipCode
+                    ? `text-red-900 ring-1 ring-inset ring-red-300 placeholder:text-red-300 focus:ring-2 focus:ring-inset focus:ring-red-500`
+                    : `text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-teal-500`
+                }`}
                 {...register("zipCode", {})}
               />
             </div>
+            <ErrorMessage
+              errors={errors}
+              name="zipCode"
+              render={({ message }) => (
+                <p className="mt-2 text-sm text-red-600">{message}</p>
+              )}
+            />
           </div>
 
           <div className="sm:col-span-2">
@@ -190,15 +214,14 @@ export default function ContactForm() {
               <textarea
                 id="message"
                 rows={4}
+                placeholder="I would like to have a refrigerator and a sofa removed from my property."
                 className={`block w-full rounded-md border-0 px-3.5 py-2 sm:text-sm sm:leading-6 ${
                   errors.message
                     ? `text-red-900 ring-1 ring-inset ring-red-300 placeholder:text-red-300 focus:ring-2 focus:ring-inset focus:ring-red-500`
                     : `text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-teal-500`
                 }`}
                 defaultValue={""}
-                {...register("message", {
-                  required: "This field is required",
-                })}
+                {...register("message", {})}
               />
             </div>
             <ErrorMessage

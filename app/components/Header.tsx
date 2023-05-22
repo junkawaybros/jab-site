@@ -90,7 +90,7 @@ export default function Header() {
           </div>
           <div className="flex lg:hidden">
             <a
-              href="#"
+              href="tel:3038565791"
               className="ml-auto mr-4 rounded-md bg-teal-500 px-3 py-2  text-sm font-semibold uppercase text-white shadow-sm transition duration-300 ease-in-out hover:bg-teal-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-500"
             >
               {data.cta}
@@ -128,7 +128,7 @@ export default function Header() {
 
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
             <a
-              href="#"
+              href="tel:3038565791"
               className="text-md rounded-md bg-teal-500 px-3.5 py-2.5 font-semibold uppercase text-white shadow-sm transition duration-300 ease-in-out hover:bg-teal-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-400"
             >
               {data.cta}
@@ -171,7 +171,7 @@ export default function Header() {
               </Link>
 
               <a
-                href="#"
+                href="tel:3038565791"
                 className="ml-auto mr-4 rounded-md bg-teal-500 px-3 py-2 text-sm font-semibold uppercase text-white shadow-sm transition duration-300 ease-in-out hover:bg-teal-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-500"
               >
                 {data.cta}
