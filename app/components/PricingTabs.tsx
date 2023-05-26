@@ -64,9 +64,9 @@ export default function PricingTabs() {
                 {items.map((item, index) => (
                   <li
                     key={index}
-                    className="relative list-disc rounded-md p-3 hover:bg-gray-900"
+                    className="relative list-disc rounded-md p-3 text-gray-300 hover:bg-gray-900"
                   >
-                    <h3 className="text-sm font-medium leading-5">{item}</h3>
+                    <h3 className="text-sm  font-medium leading-5">{item}</h3>
                   </li>
                 ))}
               </ul>
