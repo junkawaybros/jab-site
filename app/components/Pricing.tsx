@@ -2,7 +2,7 @@ import PricingTabs from "./PricingTabs";
 
 const data = {
   title: "Pricing",
-  subtitle: "How much does it cost?",
+  subtitle: "How we price?",
   cta: "Book a free estimate",
 };
 
@@ -60,6 +60,7 @@ export default function Pricing2() {
 
                       <p className="pt-4 text-gray-300">
                         {`These factors guarantee transparent pricing for the services we provide, with no hidden costs. 
+                        To get an idea take a look at our load examples.
                         To provide an exact price we'll have to see your items in person. Book your free, no-obligation estimate today!`}
                       </p>
                     </div>
